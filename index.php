@@ -58,3 +58,22 @@ for ($i = 3; $i < 100; $i = $i * 2 + 1) {
     echo $i . ",";
 }
 ?>
+
+<h3>費氏數列</h3>
+
+<?php
+fans(20);
+function fans($n)
+{
+    $n1 = 1;
+    $n2 = 1;
+    echo $n1 . "," . $n2.",";
+    for ($i = 3; $i <= $n; $i++) {
+        $ans= $n1 + $n2;
+        echo $ans.",";
+        $n1=$n2;
+        $n2=$ans;
+    }
+}
+
+?>
